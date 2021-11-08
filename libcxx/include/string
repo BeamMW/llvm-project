@@ -613,14 +613,16 @@ template <bool __b>
 void
 __basic_string_common<__b>::__throw_length_error() const
 {
-    _VSTD::__throw_length_error("basic_string");
+    //_VSTD::__throw_length_error("basic_string");
+    _VSTD::abort();
 }
 
 template <bool __b>
 void
 __basic_string_common<__b>::__throw_out_of_range() const
 {
-    _VSTD::__throw_out_of_range("basic_string");
+    //_VSTD::__throw_out_of_range("basic_string");
+    _VSTD::abort();
 }
 
 _LIBCPP_EXTERN_TEMPLATE(class _LIBCPP_EXTERN_TEMPLATE_TYPE_VIS __basic_string_common<true>)

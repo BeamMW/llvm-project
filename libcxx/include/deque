@@ -916,14 +916,16 @@ template <bool __b>
 void
 __deque_base_common<__b>::__throw_length_error() const
 {
-    _VSTD::__throw_length_error("deque");
+    //_VSTD::__throw_length_error("deque");
+    _VSTD::abort();
 }
 
 template <bool __b>
 void
 __deque_base_common<__b>::__throw_out_of_range() const
 {
-    _VSTD::__throw_out_of_range("deque");
+    //_VSTD::__throw_out_of_range("deque");
+    _VSTD::abort();
 }
 
 template <class _Tp, class _Allocator>

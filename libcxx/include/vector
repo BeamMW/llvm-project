@@ -311,7 +311,8 @@ template <bool __b>
 void
 __vector_base_common<__b>::__throw_length_error() const
 {
-    _VSTD::__throw_length_error("vector");
+    //_VSTD::__throw_length_error("vector");
+    _VSTD::abort();
 }
 
 template <bool __b>
